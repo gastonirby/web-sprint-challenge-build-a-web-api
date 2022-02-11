@@ -65,26 +65,26 @@ Inside `api/projects/projects-router.js` build the following endpoints:
 
 Inside `api/actions/actions-router.js` build endpoints for performing CRUD operations on _actions_:
 
-- [ ] `[GET] /api/actions`
+- [X] `[GET] /api/actions`
   - Returns an array of actions (or an empty array) as the body of the response.
-- [ ] `[GET] /api/actions/:id`
+- [X] `[GET] /api/actions/:id`
   - Returns an action with the given `id` as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
-- [ ] `[POST] /api/actions`
+- [X] `[POST] /api/actions`
   - Returns the newly created action as the body of the response.
   - If the request body is missing any of the required fields it responds with a status code 400.
   - When adding an action make sure the `project_id` provided belongs to an existing `project`.
-- [ ] `[PUT] /api/actions/:id`
+- [X] `[PUT] /api/actions/:id`
   - Returns the updated action as the body of the response.
   - If there is no action with the given `id` it responds with a status code 404.
   - If the request body is missing any of the required fields it responds with a status code 400.
-- [ ] `[DELETE] /api/actions/:id`
+- [X] `[DELETE] /api/actions/:id`
   - Returns no response body.
   - If there is no action with the given `id` it responds with a status code 404.
 
 #### Middleware functions
 
-- [ ] Write at least two middleware functions for this API, and consume them in the proper places of your code.
+- [X] Write at least two middleware functions for this API, and consume them in the proper places of your code.
 
 ### Database Schemas
 
@@ -147,7 +147,22 @@ We have provided test data for all the resources.
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+
+    Node.js is scalable, uses one code language, is readily available, and helps facilitate quick deployment.
+    Express is a node module that helps manage servers and routes.
+
 1. Understand and explain the use of Middleware.
+
+    Middleware functions are functions that act between the start and end, hence their name. Middleware functions help manipulate data along the route between the server and client.
+
 1. The basic principles of the REST architectural style.
+
+    Everything is a resource that is accessible via a unique URI. Resources can have multiple representations. They communicate over a stateless HTTP and are managed via HTTP methods
+
 1. Understand and explain the use of Express Routers.
+
+    Express routers exist inside an express application to help organize separate pieces to be used together.
+
 1. Describe tooling used to manually test the correctness of an API.
+
+    Tools such as Postman or HTTPie help us test API by entering in the route and seeing what it returns. These tools help us test response, headers, methods, bodies and status codes.
